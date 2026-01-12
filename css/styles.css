@@ -1,68 +1,166 @@
+/* fonts */
+/* poppins-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/poppins-v24-latin-300.woff2") format("woff2");
+}
+/* poppins-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/poppins-v24-latin-regular.woff2") format("woff2");
+}
+/* poppins-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/poppins-v24-latin-600.woff2") format("woff2");
+}
+/* poppins-900 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/poppins-v24-latin-900.woff2") format("woff2");
+}
 
 :root {
-    --primary-green: #819B57;
-    --primary-light: #F9F9F9;
-    --primary-dark: #31261A;
-    --secondary-dark: #465929;
-    --secondary-light: #A18268;
-    --secondary-green: #CFCFBC;
+  --primary-green: #819b57;
+  --primary-light: #f9f9f9;
+  --primary-dark: #31261a;
+  --secondary-dark: #465929;
+  --secondary-light: #a18268;
+  --secondary-green: #cfcfbc;
 }
 
 body {
-    color: var(--primary-dark);
+  color: var(--primary-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 /* Base */
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 span {
-    color: var(--primary-green);
+  color: var(--primary-green);
+  font-weight: 600;
 }
 
 .section-title {
-    color: var(--primary-dark);
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+address {
+  font-style: normal;
 }
 
 /* Link */
 .link {
-    color: var(--primary-light);
+  color: var(--primary-light);
+  text-decoration: none;
 }
 
 .link:hover {
-    color: var(--primary-green);
+  color: var(--primary-green);
+  font-weight: 600;
 }
 
 /* Button */
 
 .btn {
-    background-color: var(--primary-green);
-    border: 2px solid var(--primary-green);
-    border-radius: 8px;
+  background-color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+  border-radius: 8px;
 
-    width: 238px;
-    height: 59px;
+  width: 238px;
+  height: 59px;
 
-    color: var(--primary-light);
-    font-size: 18px;
+  color: var(--primary-light);
+  font-size: 18px;
+  font-weight: 600;
 
-    transition: 0.3s;
+  transition: 0.3s;
 }
 
 .btn:hover {
-    background-color: transparent;
-    color: var(--secondary-dark);
-    cursor: pointer;
+  background-color: transparent;
+  color: var(--secondary-dark);
+  cursor: pointer;
 }
 
 /* hero-section */
 .hero-title {
-    color: var(--primary-light);
-    font-size: 128px;
+  color: var(--primary-light);
+  font-size: 128px;
+  text-align: center;
 }
- 
+
 /* Traditions-section */
 .advantages {
-    background-color: var(--primary-green);
-    color: var(--primary-light);
+  background-color: var(--primary-green);
+  color: var(--primary-light);
+}
+
+.advantages-item {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Chefs-section */
+
+.chef-title {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+/* Formats-section */
+
+.formats-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.formats-text {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+/* Footer */
+
+.adress-link {
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--primary-light);
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.adress-link:hover {
+  color: var(--primary-green);
+}
+
+.adress-copyright {
+  color: var(--secondary-light);
+  font-size: 14px;
 }
