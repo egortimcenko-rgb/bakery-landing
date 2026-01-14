@@ -41,20 +41,36 @@
   --secondary-green: #cfcfbc;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--primary-dark);
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
 }
 /* Base */
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 ul {
   list-style-type: none;
 }
 
 span {
   color: var(--primary-green);
+}
+
+.brand {
   font-weight: 600;
 }
 
@@ -66,6 +82,28 @@ span {
 
 address {
   font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  margin-top: 0;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 /* Link */
@@ -106,7 +144,10 @@ address {
 .hero-title {
   color: var(--primary-light);
   font-size: 128px;
+  font-weight: 900;
   text-align: center;
+
+  padding: 272px 0;
 }
 
 /* Traditions-section */
@@ -124,11 +165,24 @@ address {
   text-transform: uppercase;
 }
 
+.traditions-section {
+  padding-top: 96px;
+}
+
+.traditions-title {
+  margin-bottom: 42px;
+}
+
 /* Chefs-section */
 
 .chef-title {
+  margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
+}
+
+.chefs-title {
+  margin-bottom: 80px;
 }
 
 /* Formats-section */
@@ -138,9 +192,19 @@ address {
   font-weight: 600;
 }
 
+.fotmat-title {
+  margin-bottom: 80px;
+}
+
 .formats-text {
   font-size: 14px;
   font-weight: 300;
+}
+
+/* Contact-section */
+
+.contact-title {
+  margin-bottom: 16px;
 }
 
 /* Footer */
