@@ -512,6 +512,12 @@ footer::after {
   position: relative;
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal-btn-close {
   position: absolute;
   right: 40px;
