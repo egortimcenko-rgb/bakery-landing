@@ -185,8 +185,60 @@
                 Join the bakery network
               </h2>
               <p>Fill out the form so we can contact you!</p>
-              <button type="button" class="btn">Request a call</button>
-              <p>By clicking the button I agree to <br />the privacy policy</p>
+              <form name="contact-form" autocomplete="off">
+                <div class="form-item">
+                  <label class="form-label hidden" for="contact-user-name"
+                    >Name</label
+                  >
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="user-name"
+                    id="contact-user-name"
+                    placeholder="Name"
+                    required
+                  />
+                </div>
+
+                <div class="form-item">
+                  <label class="form-label hidden" for="contact-user-number"
+                    >Phone number</label
+                  >
+                  <input
+                    class="form-input"
+                    type="tel"
+                    name="user-number"
+                    id="contact-user-number"
+                    placeholder="Phone-number"
+                    required
+                    pattern="^\+380[1-9]{7,}"
+                  />
+                  <span class="number-format">Number format: +380ххххххх</span>
+                </div>
+
+                <div class="form-item">
+                  <label class="form-label hidden" for="contact-user-email"
+                    >Email</label
+                  >
+                  <input
+                    class="form-input"
+                    type="email"
+                    name="user-email"
+                    id="contact-user-email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+
+                <button type="submit" class="btn form-btn">
+                  Request a call
+                </button>
+              </form>
+
+              <p class="form-text terms">
+                By clicking the button I agree to the
+                <a href="#" class="privacy">privacy policy</a>
+              </p>
             </div>
             <iframe
               class="contact-map"
@@ -240,22 +292,24 @@
                   target="_blank"
                   class="adress-link"
                 >
-                  Україна, м. Київ, вул. Січових Стрільців 54</a
+                  Україна, м. Київ, <br />
+                  вул. Січових Стрільців 54</a
                 >
               </li>
               <li>
-                <a href="#">
-                  <svg class="adress-icon" width="32" height="32">
-                    <use href="./images/icons.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg class="adress-icon" width="32" height="32">
-                    <use href="./images/icons.svg#icon-instagram"></use>
-                  </svg>
-                </a>
+                <div class="socials">
+                  <a href="#">
+                    <svg class="adress-icon" width="32" height="32">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+
+                  <a href="#">
+                    <svg class="adress-icon" width="32" height="32">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </div>
               </li>
             </ul>
 
@@ -267,9 +321,69 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop">
+
+    <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal-btn-close" type="button">exit</button>
+        <button class="modal-btn-close" type="button">
+          <svg width="32" height="32" class="close">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="form-title">Request a call</h2>
+        <p class="form-">
+          Leave a request and our specialist will contact you!
+        </p>
+
+        <form name="contact-form" autocomplete="off">
+          <div class="form-item">
+            <label class="form-label hidden" for="modal-user-name">Name</label>
+            <input
+              class="form-input"
+              type="text"
+              name="user-name"
+              id="modal-user-name"
+              placeholder="Name"
+              required
+            />
+          </div>
+
+          <div class="form-item">
+            <label class="form-label hidden" for="modal-user-number"
+              >Phone number</label
+            >
+            <input
+              class="form-input"
+              type="tel"
+              name="user-number"
+              id="modal-user-number"
+              placeholder="Phone-number"
+              required
+              pattern="^\+380[1-9]{7,}"
+            />
+            <span class="number-format">Number format: +380ххххххх</span>
+          </div>
+
+          <div class="form-item">
+            <label class="form-label hidden" for="modal-user-email"
+              >Email</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              name="user-email"
+              id="modal-user-email"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn form-btn">Request a call</button>
+        </form>
+
+        <p class="form-text terms">
+          By clicking the button I agree to the
+          <a href="#" class="privacy">privacy policy</a>
+        </p>
       </div>
     </div>
     <script src="./Js/modal.js"></script>

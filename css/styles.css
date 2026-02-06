@@ -119,6 +119,11 @@ h6 {
   text-transform: uppercase;
 }
 
+.underline {
+  text-decoration: underline;
+  color: var(--primary-dark);
+}
+
 a {
   display: inline-block;
 }
@@ -158,7 +163,11 @@ a {
 
 /* Header */
 header {
-  background-color: purple;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 32px;
 }
 
 .header-container {
@@ -186,7 +195,15 @@ header {
 
 .hero-section {
   padding: 272px 0;
-  background-image: url(../images/hero-background.jpg);
+  background-image:
+    linear-gradient(
+      102.76deg,
+      rgba(18, 18, 17, 0.78) 2.03%,
+      rgba(18, 18, 17, 0.6) 58.46%,
+      rgba(18, 18, 17, 0) 90.36%
+    ),
+    url(../images/hero-background.jpg);
+
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -487,9 +504,21 @@ footer::after {
   flex-grow: 1;
 }
 
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .address-list,
 .address-info {
   flex-grow: 1;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 /* Modal */
@@ -499,17 +528,36 @@ footer::after {
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
 
+  padding: 20px 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: 0.3s;
 }
 
 .modal {
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
   background-color: var(--primary-light);
   border-radius: 32px;
   position: relative;
+  padding: 128px;
+  position: relative;
+
+  overflow-y: auto;
+}
+
+.modal::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/modal-bread.png);
+  width: 180px;
+  height: 240px;
+  right: 0;
 }
 
 .backdrop.is-hidden {
@@ -522,4 +570,76 @@ footer::after {
   position: absolute;
   right: 40px;
   top: 40px;
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.close {
+  transition: 0.7s;
+}
+
+.modal-btn-close:hover .close {
+  transform: rotate(360deg);
+}
+
+.privacy {
+  color: var(--primary-dark);
+}
+
+/* Form */
+
+.form-item {
+  margin-bottom: 32px;
+}
+
+.form-label {
+  display: block;
+}
+
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  border: 1px solid var(--secondary-light);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--primary-green);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--secondary-light);
+}
+
+.form-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.form-text {
+  text-align: center;
+}
+
+.terms {
+  font-size: 12px;
+  max-width: 213px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 64px;
+  margin: 0;
+}
+
+.number-format {
+  font-size: 12px;
 }
