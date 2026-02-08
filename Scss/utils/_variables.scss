@@ -1,0 +1,28 @@
+:root {
+  --primary-green: #819b57;
+  --primary-light: #faf4ea;
+  --primary-dark: #31261a;
+  --secondary-dark: #465929;
+  --secondary-light: #a18268;
+  --secondary-green: #cfcfbc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--primary-dark);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  background-color: var(--primary-light);
+}
+
+html {
+  scroll-behavior: smooth;
+}

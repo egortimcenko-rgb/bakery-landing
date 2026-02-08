@@ -1,0 +1,51 @@
+.form-item {
+  margin-bottom: 32px;
+}
+
+// .form-label {
+//   display: block;
+// }
+
+.form-input {
+  padding: 16px 42px;
+  width: 100%;
+  border: 1px solid var(--secondary-light);
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.form-input:focus {
+  border-color: var(--primary-green);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--secondary-light);
+}
+
+.form-btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.form-text {
+  text-align: center;
+}
+
+.terms {
+  font-size: 12px;
+  max-width: 213px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+
+.form-title {
+  text-align: center;
+  font-weight: 900;
+  font-size: 64px;
+  margin: 0;
+}
+
+.number-format {
+  font-size: 12px;
+}
